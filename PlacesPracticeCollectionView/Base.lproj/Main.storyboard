@@ -1,25 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mhT-4C-hf3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Places Collection View Controller-->
+        <scene sceneID="HCi-8g-9Ab">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <collectionViewController id="mhT-4C-hf3" customClass="PlacesCollectionViewController" customModule="PlacesPracticeCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UXK-hc-fiQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="60" id="eO4-Zq-w1Z">
+                            <size key="itemSize" width="205" height="296"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="placesCell" id="kfN-Nb-WXc" customClass="PlacesCell" customModule="PlacesPracticeCollectionView" customModuleProvider="target">
+                                <rect key="frame" x="20" y="92" width="205" height="296"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="205" height="296"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p1" translatesAutoresizingMaskIntoConstraints="NO" id="RRl-fD-Rou">
+                                            <rect key="frame" x="0.0" y="0.0" width="205" height="296"/>
+                                        </imageView>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKA-4C-UMa">
+                                            <rect key="frame" x="0.0" y="257" width="205" height="39"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lfl-Kq-tKb">
+                                                <rect key="frame" x="0.0" y="0.0" width="205" height="39"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdR-gK-GCs">
+                                                        <rect key="frame" x="0.0" y="-257" width="0.0" height="0.0"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="HfL-TC-RBJ">
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </view>
+                                                        <vibrancyEffect>
+                                                            <blurEffect style="light"/>
+                                                        </vibrancyEffect>
+                                                    </visualEffectView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV5-7e-Jii">
+                                                        <rect key="frame" x="67" y="7" width="71" height="26"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="26"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="GV5-7e-Jii" firstAttribute="centerX" secondItem="lfl-Kq-tKb" secondAttribute="centerX" id="C4E-Ey-7hc"/>
+                                                    <constraint firstItem="GV5-7e-Jii" firstAttribute="centerY" secondItem="lfl-Kq-tKb" secondAttribute="centerY" id="Qko-Xt-qEX"/>
+                                                </constraints>
+                                            </view>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="jKA-4C-UMa" secondAttribute="height" multiplier="205:39" id="6s6-d9-kpK"/>
+                                            </constraints>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="1" green="0.70321311314697865" blue="0.27102697309986856" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jKA-4C-UMa" secondAttribute="trailing" id="6Cz-Bf-oR3"/>
+                                    <constraint firstItem="RRl-fD-Rou" firstAttribute="leading" secondItem="kfN-Nb-WXc" secondAttribute="leading" id="Etf-0C-Tpx"/>
+                                    <constraint firstAttribute="trailing" secondItem="RRl-fD-Rou" secondAttribute="trailing" id="W5I-aM-vwU"/>
+                                    <constraint firstAttribute="bottom" secondItem="RRl-fD-Rou" secondAttribute="bottom" id="Ys5-V0-BZT"/>
+                                    <constraint firstAttribute="bottom" secondItem="jKA-4C-UMa" secondAttribute="bottom" id="aP4-wb-zKL"/>
+                                    <constraint firstItem="RRl-fD-Rou" firstAttribute="top" secondItem="kfN-Nb-WXc" secondAttribute="top" id="e2W-KB-Jxk"/>
+                                    <constraint firstItem="jKA-4C-UMa" firstAttribute="leading" secondItem="kfN-Nb-WXc" secondAttribute="leading" id="kNc-Ku-nGO"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="RRl-fD-Rou" id="126-wO-aua"/>
+                                    <outlet property="titleLabel" destination="GV5-7e-Jii" id="p2X-02-9Gg"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="mhT-4C-hf3" id="yy9-1M-CPU"/>
+                            <outlet property="delegate" destination="mhT-4C-hf3" id="sCP-sU-R80"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="qQx-1o-5tQ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nN5-Uu-j01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1046" y="1037"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="p1" width="830" height="550"/>
+    </resources>
 </document>
