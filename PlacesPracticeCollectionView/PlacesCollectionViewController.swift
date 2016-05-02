@@ -15,7 +15,11 @@ class PlacesCollectionViewController: UICollectionViewController {
     let dataSource = PlacesDataSource.places
     override func viewDidLoad() {
         super.viewDidLoad()
-        //collectionView?.backgroundColor = UIColor.whiteColor()
+        //
+        
+        collectionView!.layer.cornerRadius = 10
+        collectionView?.layer.borderColor = UIColor.whiteColor().CGColor
+        collectionView?.layer.borderWidth = 2
         
         
         // Uncomment the following line to preserve selection between presentations

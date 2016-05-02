@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mhT-4C-hf3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UKP-y7-xtQ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Places Collection View Controller-->
@@ -13,6 +14,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UXK-hc-fiQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="60" id="eO4-Zq-w1Z">
                             <size key="itemSize" width="205" height="296"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -91,7 +93,69 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nN5-Uu-j01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="1037"/>
+            <point key="canvasLocation" x="1312" y="1634"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VqV-ro-biu">
+            <objects>
+                <viewController id="UKP-y7-xtQ" customClass="ViewController" customModule="PlacesPracticeCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gWc-Hd-i9a"/>
+                        <viewControllerLayoutGuide type="bottom" id="CkS-JH-D18"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Ui-f8-4cW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p1" translatesAutoresizingMaskIntoConstraints="NO" id="CX5-qa-Znk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwZ-H9-8dk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CM5-Zf-E8w">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jgs-lO-kSr">
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="d8R-oq-dZq">
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-Jj-Azi">
+                                <rect key="frame" x="20" y="259" width="280" height="201"/>
+                                <connections>
+                                    <segue destination="mhT-4C-hf3" kind="embed" id="kus-Ca-4ux"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qwZ-H9-8dk" secondAttribute="trailing" id="16K-AE-zIH"/>
+                            <constraint firstItem="CX5-qa-Znk" firstAttribute="top" secondItem="7Ui-f8-4cW" secondAttribute="top" id="2hL-t2-5hr"/>
+                            <constraint firstItem="qwZ-H9-8dk" firstAttribute="top" secondItem="7Ui-f8-4cW" secondAttribute="top" id="9Mx-jF-Kzj"/>
+                            <constraint firstItem="qwZ-H9-8dk" firstAttribute="leading" secondItem="7Ui-f8-4cW" secondAttribute="leading" id="ANJ-Sp-LHx"/>
+                            <constraint firstItem="CX5-qa-Znk" firstAttribute="leading" secondItem="7Ui-f8-4cW" secondAttribute="leading" id="IqF-yF-hwl"/>
+                            <constraint firstItem="CkS-JH-D18" firstAttribute="top" secondItem="qwZ-H9-8dk" secondAttribute="bottom" id="Ojk-Pq-DO3"/>
+                            <constraint firstAttribute="trailing" secondItem="CX5-qa-Znk" secondAttribute="trailing" id="XgF-3s-NF3"/>
+                            <constraint firstItem="LBd-Jj-Azi" firstAttribute="leading" secondItem="7Ui-f8-4cW" secondAttribute="leadingMargin" constant="4" id="aRu-o3-ppv"/>
+                            <constraint firstItem="CkS-JH-D18" firstAttribute="top" secondItem="CX5-qa-Znk" secondAttribute="bottom" id="g6w-gV-8b1"/>
+                            <constraint firstItem="LBd-Jj-Azi" firstAttribute="top" secondItem="gWc-Hd-i9a" secondAttribute="bottom" constant="239" id="hse-3S-KFH"/>
+                            <constraint firstAttribute="bottom" secondItem="LBd-Jj-Azi" secondAttribute="bottom" constant="20" symbolic="YES" id="mrv-4Z-kOk"/>
+                            <constraint firstItem="LBd-Jj-Azi" firstAttribute="centerX" secondItem="7Ui-f8-4cW" secondAttribute="centerX" id="vnM-Tn-xm2"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWy-yQ-2bC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="1634"/>
         </scene>
     </scenes>
     <resources>
